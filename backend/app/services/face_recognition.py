@@ -28,6 +28,7 @@ class FaceRecognitionService:
             if len(image_array.shape) == 3 and image_array.shape[2] == 3:
                 image_array = cv2.cvtColor(image_array, cv2.COLOR_RGB2BGR)
             
+            print(image_array)
             # Extract face encodings using face_recognition
             face_encodings = face_recognition.face_encodings(image_array)
             
